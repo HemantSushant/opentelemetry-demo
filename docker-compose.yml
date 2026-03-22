@@ -792,7 +792,7 @@ services:
           memory: 80M
     restart: unless-stopped
     ports:
-      - ${POSTGRES_PORT}
+      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD
