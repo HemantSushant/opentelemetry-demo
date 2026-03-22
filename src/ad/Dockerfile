@@ -35,7 +35,7 @@ RUN mkdir -p /usr/local/newrelic
 ADD ./src/ad/newrelic/newrelic.jar /usr/local/newrelic/newrelic.jar
 ADD ./src/ad/newrelic/newrelic.yml /usr/local/newrelic/newrelic.yml
 
-ENV JAVA_TOOL_OPTIONS="-javaagent:/usr/src/app/opentelemetry-javaagent.jar -javaagent:/usr/local/newrelic/newrelic.jar -Xmx200m"
+ENV JAVA_TOOL_OPTIONS="-javaagent:/usr/src/app/opentelemetry-javaagent.jar -javaagent:/usr/local/newrelic/newrelic.jar -Xmx350m"
 
 EXPOSE ${AD_PORT}
 ENTRYPOINT [ "./build/install/opentelemetry-demo-ad/bin/Ad" ]
